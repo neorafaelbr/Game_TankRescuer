@@ -8,6 +8,9 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour {
 
 	[SerializeField]
+	private TankController tank;
+
+	[SerializeField]
 	private Text lifeLabel;
 
 	[SerializeField]
@@ -18,6 +21,9 @@ public class GameController : MonoBehaviour {
 
 	[SerializeField]
 	private Text gameOverLabel;
+
+	[SerializeField]
+	private Button restartButton;
 
 
 	private int _score;
@@ -37,7 +43,8 @@ public class GameController : MonoBehaviour {
 			_life = value;
 			lifeLabel.text = "Life: " + _life;
 			if (_life <= 0) {
-				
+				highScoreLabel.text = "HIGH SCORE = " + _score;
+				GameOver ();
 			} 
 
 			else {
@@ -50,10 +57,30 @@ public class GameController : MonoBehaviour {
 	void Start () {
 		Life = 3;
 		Score = 0;
+		lifeLabel.gameObject.SetActive (true);
+		scoreLabel.gameObject.SetActive (true);
+		highScoreLabel.gameObject.SetActive (false);
+		gameOverLabel.gameObject.SetActive (false);
+		restartButton.gameObject.SetActive (false);
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
+	}
+
+	private void GameOver(){
+		lifeLabel.gameObject.SetActive (false);
+		scoreLabel.gameObject.SetActive (false);
+		highScoreLabel.gameObject.SetActive (true);
+		gameOverLabel.gameObject.SetActive (true);
+		restartButton.gameObject.SetActive (true);
+		tank.gameObject.SetActive (false);
+	}
+
+	public void RestartButtonClicked(){
+	
+		SceneManager.LoadScene (SceneManager.GetActiveScene ().name);
+	
 	}
 }

@@ -5,6 +5,9 @@ using UnityEngine;
 public class TankCollision : MonoBehaviour {
 
 	[SerializeField]
+	private GameController gameController;
+
+	[SerializeField]
 	private AudioClip explosion;
 
 	[SerializeField]
@@ -24,6 +27,7 @@ public class TankCollision : MonoBehaviour {
 			explosionSource.Play();
 			Collider2D thisObj = other.GetComponent<Collider2D>();
 			thisObj.GetComponent<EnemyController> ().Reset();
+			gameController.Life -= 1;
 
 		}
 
@@ -33,6 +37,7 @@ public class TankCollision : MonoBehaviour {
 			rescuedSource.Play();
 			Collider2D thisObj = other.GetComponent<Collider2D>();
 			thisObj.GetComponent<SoldierController> ().Reset();
+			gameController.Score += 15;
 		}
 	}
 }
