@@ -1,4 +1,15 @@
-﻿using System.Collections;
+﻿/*
+Source File Name: SoldierController.cs;
+Author's Name: Rafael Sanches Carvalho;
+Program Description: This script controls the creation and behaviour of the soldiers to be rescued (points generator);
+Last Modified by: Autor;
+Date last Modified: 15/Oct/2017;
+Revision History: 
+->15/Oct/2017 - Inclusion of Header;
+->10/Oct/2017 - Creation of the file;
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

@@ -1,4 +1,16 @@
-﻿using System.Collections;
+﻿/*
+Source File Name: GameController.cs;
+Author's Name: Rafael Sanches Carvalho;
+Program Description: This script controls the User Interface elements, by showing, hiding and updating life and scores; 
+Last Modified by: Autor;
+Date last Modified: 15/Oct/2017;
+Revision History: 
+->15/Oct/2017 - Inclusion of Header;
+->13/Oct/2017 - Inclusion of the Restart and GameOver UI logic;
+->11/Oct/2017 - Creation of the file;
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

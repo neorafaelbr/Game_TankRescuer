@@ -1,4 +1,16 @@
-﻿using System.Collections;
+﻿/*
+Source File Name: RoadController.cs;
+Author's Name: Rafael Sanches Carvalho;
+Program Description: This script controls the moviment of the road (background scenario) in a loop; 
+Last Modified by: Autor;
+Date last Modified: 15/Oct/2017;
+Revision History: 
+->15/Oct/2017 - Inclusion of Header;
+->10/Oct/2017 - Creation of the file;
+*/
+
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

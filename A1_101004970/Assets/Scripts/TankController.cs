@@ -1,4 +1,17 @@
-﻿using System.Collections;
+﻿/*
+Source File Name: TankController.cs;
+Author's Name: Rafael Sanches Carvalho;
+Program Description: This script controls the moviment of the tank (our Hero) according to the inputs of the player; 
+Last Modified by: Autor;
+Date last Modified: 15/Oct/2017;
+Revision History: 
+->15/Oct/2017 - Inclusion of Header;
+->15/Oct/2017 - Inclusion of the optional WASD keys;
+->11/Oct/2017 - Creation of the file;
+*/
+
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
