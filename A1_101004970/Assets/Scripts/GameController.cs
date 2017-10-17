@@ -37,6 +37,8 @@ public class GameController : MonoBehaviour {
 	[SerializeField]
 	private Button restartButton;
 
+	[SerializeField]
+	private EnemyController enemy;
 
 	private int _score;
 	private int _life;
@@ -74,6 +76,7 @@ public class GameController : MonoBehaviour {
 		highScoreLabel.gameObject.SetActive (false);
 		gameOverLabel.gameObject.SetActive (false);
 		restartButton.gameObject.SetActive (false);
+		StartCoroutine ("addEnemy");
 	}
 	
 	// Update is called once per frame
@@ -81,6 +84,7 @@ public class GameController : MonoBehaviour {
 		
 	}
 
+	//Method that controls the UI elements tp be shown when life reaches 0
 	private void GameOver(){
 		lifeLabel.gameObject.SetActive (false);
 		scoreLabel.gameObject.SetActive (false);
@@ -90,9 +94,16 @@ public class GameController : MonoBehaviour {
 		tank.gameObject.SetActive (false);
 	}
 
-	public void RestartButtonClicked(){
-	
+	//Method for restarting the game when user clicks the button
+	public void RestartButtonClicked(){	
 		SceneManager.LoadScene (SceneManager.GetActiveScene ().name);
+	
+	}
+	//Method for adding more enemies
+	private IEnumerator addEnemy(){		
+		yield return new WaitForSeconds (5f);
+		Instantiate (enemy);
+		StartCoroutine ("addEnemy");
 	
 	}
 }
