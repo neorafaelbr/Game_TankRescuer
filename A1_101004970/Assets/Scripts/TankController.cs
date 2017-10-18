@@ -48,7 +48,7 @@ public class TankController : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 
-		//Move UP
+		//Move UP event
 		if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)) {		
 			_currentPos = _transform.position;
 			if (_currentPos.y < topY) {
@@ -57,7 +57,7 @@ public class TankController : MonoBehaviour {
 			_transform.position = _currentPos;
 		}
 
-		//Move Down
+		//Move Down event
 		if (Input.GetKey (KeyCode.DownArrow) || Input.GetKey(KeyCode.S)) {		
 			_currentPos = _transform.position;
 			if (_currentPos.y > bottomY) {
@@ -66,7 +66,7 @@ public class TankController : MonoBehaviour {
 			_transform.position = _currentPos;
 		}
 
-		//Move Front
+		//Move Front event
 		if (Input.GetKey (KeyCode.RightArrow) || Input.GetKey(KeyCode.D)) {		
 			_currentPos = _transform.position;
 			if (_currentPos.x < endX) {
@@ -75,7 +75,7 @@ public class TankController : MonoBehaviour {
 			_transform.position = _currentPos;
 		}
 
-		//Move Back
+		//Move Back event
 		if (Input.GetKey (KeyCode.LeftArrow) || Input.GetKey(KeyCode.A)) {		
 			_currentPos = _transform.position;
 			if (_currentPos.x > startX) {

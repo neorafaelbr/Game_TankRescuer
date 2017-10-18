@@ -29,11 +29,13 @@ public class RoadController : MonoBehaviour {
 	private Transform _transform;
 	private Vector2 _currentPos;
 
+	// Use this for initialization
 	void Start () {
 		_transform = gameObject.GetComponent<Transform> ();
 		_currentPos = _transform.position;
 	}
 
+	// Update is called once per frame
 	void Update () {
 		_currentPos = _transform.position;
 		_currentPos -= new Vector2 (speed, 0);
@@ -45,6 +47,7 @@ public class RoadController : MonoBehaviour {
 
 	}
 
+	//Reposition the background in order to use it again
 	private void Reset(){
 		_currentPos = new Vector2 (startX, 0);
 	}

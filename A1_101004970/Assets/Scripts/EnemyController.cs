@@ -53,6 +53,7 @@ public class EnemyController : MonoBehaviour {
 		_transform.position = _currentPos;
 	}
 
+	//Reposition the enemy to be used again in the game
 	public void Reset(){
 		float newPosX = Random.Range (0, 200);
 		float newPosY = Random.Range (-123, 183);

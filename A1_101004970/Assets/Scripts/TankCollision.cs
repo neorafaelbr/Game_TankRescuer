@@ -33,6 +33,7 @@ public class TankCollision : MonoBehaviour {
 	[SerializeField]
 	private AudioSource rescuedSource;
 
+	//When Tank touches on enemies and/or soldiers this method controls what should happen next
 	public void OnTriggerEnter2D(Collider2D other){
 	
 		if (other.gameObject.tag.Equals ("enemy")) {
